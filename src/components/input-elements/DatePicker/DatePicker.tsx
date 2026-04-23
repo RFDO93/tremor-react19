@@ -1,7 +1,6 @@
 "use client";
 import { tremorTwMerge } from "lib";
 import React, { useMemo } from "react";
-import { DayPickerSingleProps } from "react-day-picker";
 
 import { startOfMonth, startOfToday } from "date-fns";
 import { enUS } from "date-fns/locale";
@@ -160,10 +159,11 @@ const DatePicker = React.forwardRef<HTMLDivElement, DatePickerProps>((props, ref
           )}
         >
           {({ close }) => (
-            <Calendar<DayPickerSingleProps>
+            <Calendar
+              animate
               showOutsideDays={true}
               mode="single"
-              defaultMonth={defaultMonth}
+              //month={defaultMonth}
               selected={selectedValue}
               weekStartsOn={weekStartsOn}
               onSelect={

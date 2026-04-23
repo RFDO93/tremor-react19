@@ -4,7 +4,7 @@ import { CalendarIcon, XCircleIcon } from "assets";
 import { startOfMonth, startOfToday } from "date-fns";
 import { tremorTwMerge } from "lib";
 import React, { ReactElement, useMemo, useState } from "react";
-import { DateRange, DayPickerRangeProps } from "react-day-picker";
+import { DateRange } from "react-day-picker";
 import {
   constructValueToNameMapping,
   getNodeText,
@@ -259,10 +259,10 @@ const DateRangePicker = React.forwardRef<HTMLDivElement, DateRangePickerProps>((
               "dark:bg-dark-tremor-background dark:border-dark-tremor-border dark:divide-dark-tremor-border dark:shadow-dark-tremor-dropdown",
             )}
           >
-            <Calendar<DayPickerRangeProps>
+            <Calendar
               mode="range"
               showOutsideDays={true}
-              defaultMonth={defaultMonth}
+              //month={defaultMonth}
               selected={{
                 from: selectedStartDate,
                 to: selectedEndDate,
