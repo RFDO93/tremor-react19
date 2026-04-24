@@ -1,9 +1,9 @@
 {
-  "name": "@RFDO93/tremor-react19",
+  "name": "tremor-react19",
   "version": "0.0.0-development",
   "description": "The React library to build dashboards faster.",
   "scripts": {
-    "prebuild": "rm -rf dist",
+    "prebuild": "node -e \"require('fs').rmSync('dist', {recursive: true, force: true})\"",
     "build": "rollup -c",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "prettier": "prettier --write \"{src,types,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
@@ -66,7 +66,6 @@
     "@types/jest": "^29.5.14",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.6.2",
-    "@types/react": "18.3.28",
     "@typescript-eslint/eslint-plugin": "8.7.0",
     "@typescript-eslint/parser": "8.7.0",
     "autoprefixer": "10.4.27",
@@ -107,6 +106,13 @@
   "peerDependencies": {
     "react": "19.2.5",
     "react-dom": ">=19.2.5"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
   },
   "main": "dist/index.cjs",
   "module": "dist/index.js",

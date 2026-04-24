@@ -38,13 +38,13 @@ export default [
       peerDepsExternal(),
       resolve(),
       commonjs(),
-      preserveDirectives(),
-      terser(),
       typescript({
         tsconfig: "./tsconfig.json",
         exclude: ["**/stories/**", "**/tests/**", "./styles.css"],
       }),
       typescriptPaths(),
+      preserveDirectives(),
+      terser(),
     ],
   },
   {
