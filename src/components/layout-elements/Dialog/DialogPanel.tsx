@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { DialogPanel as HeadlessuiDialogPanel, TransitionChild } from "@headlessui/react";
 import { makeClassName, tremorTwMerge } from "lib";

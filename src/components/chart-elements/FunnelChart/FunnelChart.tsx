@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { ChartTooltipFrame, ChartTooltipRow } from "../common/ChartTooltip";
 import {

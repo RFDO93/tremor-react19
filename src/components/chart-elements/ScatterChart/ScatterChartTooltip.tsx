@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 
 import { ScatterChartValueFormatter } from "components/chart-elements/ScatterChart/ScatterChart";

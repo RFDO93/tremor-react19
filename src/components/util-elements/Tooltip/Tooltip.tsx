@@ -18,7 +18,12 @@ import {
 import { tremorTwMerge } from "lib";
 import React, { useState } from "react";
 
-export const useTooltip = (delay?: number) => {
+export interface UseTooltipReturn {
+  tooltipProps: Omit<TooltipProps, "text">;
+  getReferenceProps: (userProps?: React.HTMLProps<Element>) => Record<string, unknown>;
+}
+
+export const useTooltip = (delay?: number): UseTooltipReturn => {
   const [open, setOpen] = useState(false);
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout>();
 

@@ -1,3 +1,4 @@
+'use client'
 import { tremorTwMerge } from "lib";
 import React from "react";
 

@@ -1,3 +1,4 @@
+'use client'
 import { BaseColors, colorPalette, getColorClassNames, sumNumericArray } from "lib";
 import { Color, ValueFormatter } from "../../../lib/inputTypes";
 
